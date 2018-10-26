@@ -12,3 +12,10 @@ def hello():
 @app.route('/api/v1/products/', methods=['POST'])
 def create_products():
     return Products.create_products()
+
+
+@app.route('/api/v1/products/', methods=['GET'])
+def get_products():
+    return Products.get_products()
+
+
