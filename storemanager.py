@@ -49,3 +49,10 @@ class Products:
         }
         goods.append(product)
         return jsonify({'product': product}), 201
+
+    @staticmethod
+    def get_products():
+        if len(goods) == 0:
+            return 'No, products created yet'
+        else:
+            return jsonify({'products': goods})
