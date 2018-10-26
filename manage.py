@@ -28,3 +28,11 @@ def get_product(product_id):
 def create_sales():
     return Sales.create_sales()
 
+
+@app.route('/api/v1/sales/<int:sales_id>', methods=['GET'])
+def get_sale(sales_id):
+    return Sales.get_sale(sales_id)
+
+
+if __name__ == '__main__':
+    app.run(debug=True)

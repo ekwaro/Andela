@@ -120,4 +120,14 @@ class Sales:
         else:
             return jsonify({'goods': sales})
 
+    @staticmethod
+    def get_sale(sales_id):
+        if len(sales) == 0:
+            return 'No, sales_made yet'
+        elif type(sales_id) != int:
+            return 'Please make sure that the sales Id is a number'
+        else:
+            for sale in sales:
+                if sale['id'] == sales_id:
+                    return jsonify({'Requested sales record': sale})
 
