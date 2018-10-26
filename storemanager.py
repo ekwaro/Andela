@@ -56,3 +56,16 @@ class Products:
             return 'No, products created yet'
         else:
             return jsonify({'products': goods})
+
+    @staticmethod
+    def get_product(product_id):
+        if len(goods) == 0:
+            return 'No goods created, you need to create one'
+        elif type(product_id) != int:
+            return 'Product_id should be a number'
+        else:
+            for good in goods:
+                if good['id'] == product_id:
+                    return jsonify({'Your product is': good})
+
+
