@@ -1,5 +1,5 @@
 from flask import Flask
-from storemanage import Products
+from storemanage import Products, Sales
 
 app = Flask(__name__)
 
@@ -12,7 +12,6 @@ def hello():
 @app.route('/api/v1/products/', methods=['POST'])
 def create_products():
     return Products.create_products()
-
 
 
 @app.route('/api/v1/products/', methods=['GET'])

@@ -18,8 +18,13 @@ def create_products():
 def get_products():
     return Products.get_products()
 
+
 @app.route('/api/v1/products/<int:product_id>', methods=['Get'])
 def get_product(product_id):
     return Products.get_product(product_id)
 
+
+@app.route('/api/v1/sales/', methods=['POST'])
+def create_sales():
+    return Sales.create_sales()
 
