@@ -24,10 +24,10 @@ def create_products():
     return Products.create_products()
 
 
-# @app.route('/api/v1/sales/', methods=['Get'])
-# def get_sales():
-#     return Sales.get_sales()
-#
+@app.route('/api/v1/sales/', methods=['Get'])
+def get_sales():
+    return Sales.get_sales()
+
 #
 # @app.route('/api/v1/sales/<int:sales_id>', methods=['GET'])
 # def get_sale(sales_id):
