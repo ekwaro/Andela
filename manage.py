@@ -1,5 +1,5 @@
 from flask import Flask
-from storemanage import Products
+from storemanage import Products, Sales
 
 app = Flask(__name__)
 
