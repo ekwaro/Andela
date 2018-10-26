@@ -113,3 +113,11 @@ class Sales:
 
         return jsonify({'Created': sales_made})
 
+    @staticmethod
+    def get_sales():
+        if len(sales) == 0:
+            return 'No sales made, please create the sales'
+        else:
+            return jsonify({'goods': sales})
+
+
