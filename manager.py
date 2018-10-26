@@ -28,11 +28,10 @@ def create_products():
 def get_sales():
     return Sales.get_sales()
 
-#
-# @app.route('/api/v1/sales/<int:sales_id>', methods=['GET'])
-# def get_sale(sales_id):
-#     return Sales.get_sale(sales_id)
-#
+@app.route('/api/v1/sales/<int:sales_id>', methods=['GET'])
+def get_sale(sales_id):
+    return Sales.get_sale(sales_id)
+
 
 @app.route('/api/v1/sales/', methods=['POST'])
 def create_sales():
